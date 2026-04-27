@@ -1,3 +1,7 @@
+# Tests (locaux uniquement, non publiés)
+tests/
+conftest.py
+
 # Byte-compiled / cache
 __pycache__/
 *.py[cod]

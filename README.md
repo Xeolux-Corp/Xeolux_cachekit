@@ -530,13 +530,3 @@ XEOLUX_CACHEKIT = {
     "query_param": "v",
 }
 ```
-
----
-
-## Prochaines améliorations possibles
-
-- **`bump_cache_version`** — Commande pour incrémenter automatiquement une version (`css`, `js`, `assets`, etc.) directement dans `settings.py`.
-- **Intégration avec `collectstatic`** — Signal post-`collectstatic` pour incrémenter automatiquement les versions après un déploiement.
-- **Versions depuis le hash des fichiers** — Génération automatique d'une version basée sur le hash MD5/SHA1 du contenu du fichier statique (similaire à `ManifestStaticFilesStorage` mais léger).
-- **Support WhiteNoise** — Compatibilité et documentation dédiée pour les projets utilisant WhiteNoise comme backend de fichiers statiques.
-- **Middleware Cache-Control** — Middleware optionnel pour ajouter automatiquement les headers `Cache-Control` adaptés selon le type de ressource et la version configurée.

@@ -17,7 +17,8 @@ _DEFAULTS: dict = {
     "assets": "1.0.0",
     "cookies": "1.0.0",
     "query_param": "v",
-    "strategy": "manual",  # "manual" ou "hash"
+    "strategy": "manual",      # "manual" ou "hash"
+    "sri_algorithm": "sha384", # "sha256", "sha384" ou "sha512"
 }
 
 # Cache interne — invalider avec clear_config_cache() (utile dans les tests)
@@ -47,12 +48,13 @@ def _get_config() -> dict:
 
 
 def clear_config_cache() -> None:
-    """Invalide le cache de configuration et de hash (utile dans les tests ou après hot-reload)."""
+    """Invalide le cache de configuration, de hash et SRI (utile dans les tests ou après hot-reload)."""
     global _config_cache
     _config_cache = None
-    # Invalide aussi le cache des hashes pour cohérence
     from .hashers import clear_hash_cache
     clear_hash_cache()
+    from .sri import clear_sri_cache
+    clear_sri_cache()
 
 
 def get_setting(key: str) -> str:
