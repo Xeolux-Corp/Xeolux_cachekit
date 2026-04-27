@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xeolux-cachekit"
+version = "0.1.0"
+description = "Gestion des versions de cache pour fichiers statiques et cookies dans Django."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "XEOLUX", email = "dev@xeolux.com" }
+]
+keywords = ["django", "cache", "static", "versioning", "cookies"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "Django>=4.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/Xeolux-Corp/Xeolux_cachekit"
+Repository = "https://github.com/Xeolux-Corp/Xeolux_cachekit"
+Changelog = "https://github.com/Xeolux-Corp/Xeolux_cachekit/releases"
+Issues = "https://github.com/Xeolux-Corp/Xeolux_cachekit/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["xeolux_cachekit*"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+pythonpath = ["."]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
