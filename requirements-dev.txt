@@ -1,0 +1,16 @@
+# Dépendances de développement uniquement
+# Installer avec : pip install -r requirements-dev.txt
+
+# Tests
+pytest
+pytest-django
+
+# Build & publication
+build
+twine
+
+# Linting / formatage
+ruff
+
+# Environnement Django minimal pour les tests
+Django>=4.2

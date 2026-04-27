@@ -7,7 +7,8 @@ name = "xeolux-cachekit"
 version = "0.1.0"
 description = "Gestion des versions de cache pour fichiers statiques et cookies dans Django."
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "XEOLUX", email = "dev@xeolux.com" }
 ]
@@ -19,7 +20,6 @@ classifiers = [
     "Framework :: Django :: 5.0",
     "Framework :: Django :: 5.1",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
