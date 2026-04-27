@@ -43,3 +43,6 @@ class XeoluxCacheKitConfig(AppConfig):
 
         # Valide la config courante au démarrage
         _validate_config(_get_config())
+
+        # Enregistre les system checks Django
+        from . import checks  # noqa: F401
